@@ -3,16 +3,13 @@ import {
   IonContent,
   IonHeader,
   IonPage,
+  IonRouterLink,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { useHistory } from "react-router-dom";
+import IonTabBarComp from "../../components/iontabbar";
 
 const SettingsPage = () => {
-  const history = useHistory();
-  const clickHandler = (location: string) => {
-    history.push(`/${location}`);
-  };
   return (
     <IonPage>
       <IonHeader>
@@ -21,9 +18,9 @@ const SettingsPage = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen className="ion-padding">
-        <IonButton onClick={() => clickHandler("settings")}>Settings</IonButton>
-        <IonButton onClick={() => clickHandler("home")}>Home</IonButton>
+        <IonRouterLink routerLink="/home">Home</IonRouterLink>
       </IonContent>
+      <IonTabBarComp />
     </IonPage>
   );
 };

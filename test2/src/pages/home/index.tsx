@@ -1,32 +1,27 @@
 import {
-  IonButton,
   IonContent,
   IonHeader,
-  IonPage,
   IonTitle,
   IonToolbar,
+  IonPage,
+  IonRouterLink,
 } from "@ionic/react";
-import "./Home.css";
-import { useHistory } from "react-router-dom";
+import IonTabBarComp from "../../components/iontabbar";
 
-const Home: React.FC = () => {
-  const history = useHistory();
-  const clickHandler = (location: string) => {
-    history.push(`/${location}`);
-  };
+const HomePage = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Home Page</IonTitle>
+          <IonTitle></IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen className="ion-padding">
-        <IonButton onClick={() => clickHandler("settings")}>Settings</IonButton>
-        <IonButton onClick={() => clickHandler("home")}>Home</IonButton>
+      <IonContent>
+        <IonRouterLink routerLink="/">Go to landing page</IonRouterLink>
       </IonContent>
+      <IonTabBarComp />
     </IonPage>
   );
 };
 
-export default Home;
+export default HomePage;
