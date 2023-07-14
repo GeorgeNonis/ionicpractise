@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">PractiseCapacitor</string>
+    <string name="title_activity_main">PractiseCapacitor</string>
+    <string name="package_name">com.example.practisecapacitor</string>
+    <string name="custom_url_scheme">com.example.practisecapacitor</string>
+</resources>
